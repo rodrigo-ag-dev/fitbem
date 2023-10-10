@@ -1,0 +1,407 @@
+.splashBody {
+  position: relative;
+  width: 1376px;
+  height: 100vh;
+}
+
+.splashMenu {
+  width: 100%;
+  height: 68px;
+  background-color: var(--splashMenu-bgcolor);
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.splashLogo {
+  margin-left: 40px;
+  width: 104px;
+  height: 47px;
+  background-image: url('../images/splashLogo.png');
+}
+
+.splashLogo:hover {
+  cursor: pointer;
+}
+
+.splashOptions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  right: 10px;
+  height: 68px;
+  width: calc(100% - 146px);
+}
+
+.splashOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--primary-color);
+  width: 130px;
+  height: 68px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-inline: 30px;
+  margin-bottom: 2px;
+  background-color: transparent;
+  transition: background .5s, color .5s;
+}
+
+.splashOption:hover {
+  cursor: pointer;
+  color: var(--primary-text);
+  background-color: var(--primary-color);
+}
+
+.splashOptionSelected {
+  color: var(--primary-text);
+  background-color: var(--primary-color-sel);
+}
+
+.splashOption p {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.splashDetail {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: #cedfef;
+  background-size: cover;
+}
+
+.splashSlogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: calc(100vh - 68px);
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sloganTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-left: 40px;
+}
+
+.sloganText {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-left: 40px;
+  max-width: 400px;
+}
+
+.sloganButton {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-text);
+  background-color: var(--primary-color);
+  height: 55px;
+  width: 288px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  margin-top: 80px;
+  margin-left: 40px;
+}
+
+.sloganButton:hover {
+  cursor: pointer;
+  color: var(--primary-text);
+  background-color: #144552;
+  transition: background .5s, color .5s;
+}
+
+.formButton {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-text);
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  width: 100%;
+  max-width: 448px;
+  height: 68px;
+  min-height: 68px;
+  margin-bottom: 15px;
+}
+
+.formButton:hover {
+  cursor: pointer;
+  color: var(--primary-text);
+  background-color: #144552;
+  transition: background .5s, color .5s;
+}
+
+.aboutBody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.aboutDetail {
+  padding: relative;
+  width: 100%;
+  height: calc(100% - 227px);
+  background-color: #f6f6f6;
+  overflow: hidden;
+}
+
+.aboutFooter {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 227px;
+  background-color: var(--primary-color);
+}
+
+.aboutFooterDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 227px;
+}
+
+.aboutFooter div:last-of-type {
+  background-color: var(--primary-color);
+}
+
+.footerTitle {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--primary-text);
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.footerText {
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  color: var(--primary-text);
+  margin-top: 15px;
+  width: 490px;
+}
+
+.about1 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 276px;
+  top: 221px;
+  width: 296px;
+  height: 264px;
+  background-image: url('../images/about1.png');
+}
+
+.about2 {
+  position: absolute;
+  right: 74px;
+  bottom: 227px;
+  width: 433px;
+  height: 649px;
+  background-image: url('../images/about2.png');
+}
+
+.aboutTitle {
+  position: absolute;
+  left: 40px;
+  top: 100px;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-left: 40px;
+}
+
+.aboutText {
+  position: absolute;
+  right: 40px;
+  top: 100px;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-left: 40px;
+  max-width: 450px;
+}
+
+.aboutDetailName {
+  margin-top: 70px;
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.aboutDetailTitle {
+  margin-top: 15px;
+  font-size: 26px;
+  font-weight: 100;
+  color: var(--primary-color);
+  width: 647px;
+}
+
+.aboutDetailText {
+  margin-top: 85px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-color);
+  width: 600px;
+  text-align: center;
+}
+
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+}
+
+.screenLeft {
+  width: 675px;
+  height: 100%;
+  background-color: var(--primary-color);
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.screenRight {
+  width: calc(100% - 675px);
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+.contato {
+  overflow: hidden;
+  background-image: url('../images/contato.png');
+}
+
+.cadastro {
+  overflow: hidden;
+  background-image: url('../images/create.png');
+}
+
+.login {
+  overflow: hidden;
+  background-image: url('../images/login.png');
+}
+
+.logo {
+  width: 96px;
+  height: 86px;
+  min-height: 86px;
+  background-image: url('../images/logowhite.png');
+  background-position-x: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-size: 40px;
+  margin-block: 15px;
+}
+
+.text {
+  font-size: 20px;
+}
+
+.forget {
+  font-size: 20px;
+  text-align: right;
+  width: 100%;
+  max-width: 448px;
+  margin-bottom: 33px;
+  color: var(--input-color);
+}
+
+.forget:hover {
+  cursor: pointer;
+  color: var(--input-color-hover);
+}
+
+.screenTop {
+  margin-top: 107px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-text);
+  font-size: 40px;
+  max-height: 20%;
+}
+
+.screenBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 50px;
+  max-height: calc(100vh - 200px);
+}
+
+.comboField,
+.inputField {
+  width: 100%;
+  height: 68px;
+  max-width: 448px;
+  margin-bottom: 33px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  color: var (--input-color);
+  border-radius: 15px;
+  color: var(--input-color);
+  background-color: var(--input-bgcolor);
+  font-size: 20px;
+  font-family: Poppins, sans-serif;
+}
+
+.comboField:focus,
+.inputField:focus {
+  border: 3px solid var(--primary-color-sel);
+}
+
+.inputField::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--input-color);
+}
+
+.inputField::-moz-placeholder {
+  /* Firefox 19+ */
+  color: var(--input-color);
+}
+
+.inputField:-ms-input-placeholder {
+  /* IE 10+ */
+  color: var(--input-color);
+}
+
+.inputField:-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--input-color);
+}

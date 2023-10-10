@@ -1,0 +1,316 @@
+.appBody {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: #7d9298;
+}
+
+.appDetail {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e9e4e4;
+  height: calc(100% - 132pt);
+  width: 1316pt;
+  min-width: 1316px;
+  max-width: 1316px;
+  min-height: 680px;
+  margin-block: 68pt;
+  margin-inline: 62pt;
+  border-radius: 20pt;
+}
+
+.appLeft {
+  position: relative;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em;
+  margin-right: 1em;
+  width: 6em;
+  max-width: 6em;
+  border-radius: 20pt;
+  background-color: #4f808d;
+}
+
+.appBase {
+  position: relative;
+  display: flex;
+  flex: 1;
+  margin-block: 2em;
+  background-color: transparent;
+}
+
+.appCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: .70;
+  background-color: transparent;
+}
+
+.appRight {
+  display: flex;
+  flex-direction: column;
+  flex: .27;
+  background-color: transparent;
+}
+
+.appIndexTop {
+  padding-left: 20pt;
+  padding-right: 10pt;
+  width: calc(100% - 30pt);
+  height: 50px;
+  font-size: 18pt;
+  font-weight: bold;
+  color: #4f808d;
+}
+
+.appIndexMiddle {
+  display: flex;
+  flex: 1;
+}
+
+.appIndexDash {
+  position: relative;
+  flex: 1;
+  margin: 25pt;
+  min-height: 314.312px;
+  border-radius: 10pt;
+  background-color: #4f808d;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 16px -8px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 16px -8px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 16px -8px rgba(0, 0, 0, 1);
+}
+
+.appIndexBottom {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 320px;
+}
+
+.divCampaign {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 320px;
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 10pt;
+  background-color: var(--splashMenu-bgcolor);
+  -webkit-box-shadow: 5px 5px 16px -8px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 16px -8px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 16px -8px rgba(0, 0, 0, 1);
+}
+
+.divCampaign img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-left: 100%;
+
+  -webkit-transition: margin-left 500ms ease-in;
+  -moz-transition: margin-left 500ms ease-in;
+  -o-transition: margin-left 500ms ease-in;
+  transition: margin-left 500ms ease-in;
+}
+
+.ativa {
+  margin-left: -400%;
+}
+
+.appTips {
+  position: relative;
+  margin-top: 25pt;
+  margin-inline: 25pt;
+  width: 50%;
+  height: calc(100% - 25pt);
+  background-color: var(--splashMenu-bgcolor);
+  border-radius: 10pt;
+  -webkit-box-shadow: 5px 5px 16px -8px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 16px -8px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 16px -8px rgba(0, 0, 0, 1);
+}
+
+.appTipsTitle {
+  font-size: 13pt;
+  position: absolute;
+  top: 20pt;
+  left: 20pt;
+  color: var(--secondary-color);
+}
+
+.appTipsIcon {
+  margin-top: -2em;
+  margin-left: calc(100% - 5.5em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4em;
+  height: 4em;
+  background-color: var(--primary-color);
+  border-radius: 10pt;
+}
+
+.appTipsChild {
+  position: absolute;
+  top: calc(calc(100% / 2) - 20pt);
+  left: calc(calc(100% / 2) - 35%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 40pt;
+  background-color: var(--secondary-color);
+  border-radius: 10pt;
+}
+
+.appTipsChild P {
+  font-size: 23pt;
+  font-weight: bold;
+  color: var(--input-color);
+}
+
+.appTipsInfo {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  font-size: 10pt;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.iconButton {
+  width: 4.5em;
+  height: 4.5em;
+  min-height: 4.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15pt;
+  background-color: transparent;
+  transition: background .5s;
+  margin-inline: .5em;
+  margin-block: .5em;
+}
+
+.iconButton:hover {
+  cursor: pointer;
+  background-color: var(--secundary-color-sel);
+}
+
+.iconButtonSel {
+  background-color: #1b3941;
+}
+
+.iconButton img {
+  width: 3em;
+  height: 3em;
+}
+
+.menuDivisor {
+  width: 4em;
+  height: 2px;
+  background-color: #83a6af;
+}
+
+.divRow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.divRow1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+}
+
+.divRow2 {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divLast {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.divCircle {
+  margin-left: 0.2rem;
+  margin-top: -4.7rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 9rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.divMainCircle {
+  margin-top: 7rem;
+  width: 9.4rem;
+  height: 4.5rem;
+  border-bottom-left-radius: 110px;
+  border-bottom-right-radius: 110px;
+  border: 14px solid #236678;
+  border-top: 0;
+}
+
+.divCircle P {
+  color: #236678;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.divCircle .p2 {
+  color: #236678;
+}
+
+.divCircle P:nth-child(1n + 2),
+P2:nth-child(1n + 2) {
+  font-size: 30px;
+}
+
+.divTitle {
+  font-size: 13pt;
+  color: white;
+}
+
+.divState {
+  padding: 5pt;
+  padding-inline: 10pt;
+  font-size: 28px;
+  color: white;
+  border-radius: 10pt;
+  background-color: var(--secundary-color-sel);
+  max-width: 200pt;
+  text-align: center;
+}

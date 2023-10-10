@@ -1,0 +1,19 @@
+{
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon src/api.js",
+    "start": "nodemon src/api.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.0",
+    "knex": "^2.4.2",
+    "pg": "^8.10.0",
+    "serverless-http": "^3.2.0",
+    "sqlite3": "^5.1.6"
+  }
+}
