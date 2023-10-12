@@ -1,10 +1,8 @@
 # FITBEM
 * É um projeto desenvolvido em conjunto com o SENAC.
-* Sua principal finalidade é ...
+* Sua principal finalidade é atender a demanda em desenvolver um projeto funcional para a disciplina PI.
 
-## Instalação e configuração do aplicativo
-
-### Os desenvolvedores deste projeto, usaram as seguintes tecnologias:
+## Algumas das tecnologias utilizadas pelos desenvolvedores deste projeto:
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -18,6 +16,7 @@
 ![Yarn](https://img.shields.io/badge/yarn-392e69.svg?style=for-the-badge&logo=yarn&logoColor=white)
 
 
+## Instalação e configuração do aplicativo
 ### Requisitos necessários e previamente instalados
 * ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) - **versão mais atual**;
 * ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) - **versão LTS mais atual (recomendamos a versão 18.18.0)**;
