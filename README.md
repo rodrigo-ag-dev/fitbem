@@ -27,10 +27,9 @@
 * Usando o git, faça um clone do projeto: https://github.com/rodrigo-ag-dev/fitbem
 
 ### Preparando o backend - API
-* Pelo console (Windows use o PowerShell ou CMD; Linux ou MacOS use o Terminal.) Acesse a pasta onde você fez o clone do git e em seguida acesse a subpasta “back”.
-* Execute os passos a seguir:
-** Instale as dependências “yarn install” ou “npm install”;
-** Para instanciar o serviço em máquina local, use o comando “yarn dev” ou “npm run dev”
+* Pelo console (Windows use o PowerShell ou CMD; Linux ou MacOS use o Terminal.) Acesse a pasta onde você fez o clone do git e em seguida acesse a subpasta **back**.
+* Instale as dependências **yarn install**;
+* Para instanciar o serviço em máquina local, use o comando **yarn dev**
 
 ### Visualizando o portal
-* Basta abrir, no seu navegador preferido, o arquivo “index.html” contido na pasta onde você fez o clone e subpasta “front”
+* Basta abrir, em seu navegador preferido, o arquivo **index.html** contido dentro da subpasta **front** da pasta você fez o clone
