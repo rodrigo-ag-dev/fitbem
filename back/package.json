@@ -15,5 +15,8 @@
     "pg": "^8.10.0",
     "serverless-http": "^3.2.0",
     "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

@@ -1,5 +1,5 @@
-//const _addressAPI = 'http://localhost:3333/api/'
-const _addressAPI = 'https://serverfitbem.vercel.app/api/'
+const _addressAPI = 'http://localhost:3333/api/'
+//const _addressAPI = 'https://serverfitbem.vercel.app/api/'
 var _token = null
 var _name = null
 var _email = null
