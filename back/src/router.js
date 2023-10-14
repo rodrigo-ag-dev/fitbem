@@ -6,6 +6,7 @@ const user = require('./controllers/user.js')
 const history = require('./controllers/history.js')
 const health = require('./controllers/health.js')
 const trainer = require('./controllers/trainer.js')
+const notification = require('./controllers/notification.js')
 
 const routes = express()
 routes.use(express.json())
@@ -23,6 +24,9 @@ routes.get('/trainer', trainer.get)
 
 routes.get('/health/:id', health.index)
 routes.get('/health', health.get)
+
+routes.get('/notification/:iduser', notification.index)
+routes.post('/notification/:id', notification.update)
 
 routes.get('/user', user.index)
 routes.delete('/user/:id', user.delete)
