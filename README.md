@@ -1,4 +1,4 @@
-# FITBEM
+# Fit Bem
 * É um projeto desenvolvido em conjunto com o SENAC.
 * Sua principal finalidade é atender a demanda em desenvolver um projeto funcional para a disciplina PI.
 
