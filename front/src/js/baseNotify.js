@@ -42,24 +42,39 @@ const _createRecord = ({ id, type, message, day, status }) => {
   // Register
   const divRegister = document.createElement('div')
   divRegister.classList.add('notifyRegister')
-  if (status == 1) {
+  if (status == 0) {
     divRegister.classList.add('notifyRegisterNoRead')
     divRegister.tag = status
   }
   divRegister.appendChild(leftRegister)
   divRegister.appendChild(rightRegister)
 
-  divRegister.id = 'r' + id
+  divRegister.idNotification = id
 
   divRegister.addEventListener('click', () => {
+    if (timerUpdateRead)
+      clearTimeout(timerUpdateRead)
     const divCenter = document.querySelector('.appCenter')
     for (const child of divCenter.children) {
-      child.classList.remove('notifyRegisterNoRead')
-      if (child.id == 'r' + id)
-        child.classList.add('notifyRegisterSelected')
-      else {
+      child.classList.add('notifyRegisterSelected')
+      if (child.idNotification == id) {
+        if (child.classList.contains('notifyRegisterNoRead')) {
+          child.classList.remove('notifyRegisterNoRead')
+
+          timerUpdateRead = setTimeout(() => {
+            fetch(_addressAPI + 'notification/' + child.idNotification, { method: 'POST', headers: { "Authorization": "Bearer " + _token } })
+              .then(resp => {
+                resp.json()
+                  .then(() => {
+                    divRegister.tag = 1
+                    timerUpdateRead = null
+                  })
+              })
+          }, 5000)
+        }
+      } else {
         child.classList.remove('notifyRegisterSelected')
-        if (child.tag == 1)
+        if (child.tag == 0)
           child.classList.add('notifyRegisterNoRead')
       }
     }

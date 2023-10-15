@@ -4,6 +4,7 @@ var _token = null
 var _name = null
 var _email = null
 var _userId = null
+var timerUpdateRead = null
 var _bmi = 0
 var _height = 0
 var _weight = 0

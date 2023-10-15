@@ -334,13 +334,13 @@ P2:nth-child(1n + 2) {
   height: 98px;
   min-height: 98px;
   max-height: 98px;
-  background-color: #EBEBEB;
+  background-color: white;
   border: 1px solid #D9D9D9;
   border-bottom: 0px;
   color: var(--secondary-color);
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */ 
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .notifyRegister:hover {
@@ -357,7 +357,7 @@ P2:nth-child(1n + 2) {
 }
 
 .notifyRegisterNoRead {
-  background-color: white;
+  background-color: #EBEBEB;
 }
 
 .notifyIcon {
