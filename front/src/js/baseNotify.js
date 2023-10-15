@@ -4,6 +4,10 @@ const _createRecord = ({ id, type, message, day, status }) => {
   iIcon.classList.add('notifyIcon')
   iIcon.src = './src/images/message.png'
 
+  const iReady = document.createElement('img')
+  iReady.classList.add('notifyReady')
+  iReady.src = './src/images/ready.png'
+
   const pUser = document.createElement('p')
   pUser.classList.add('notifyUser')
   pUser.innerHTML = 'Fit Bem'
@@ -17,6 +21,7 @@ const _createRecord = ({ id, type, message, day, status }) => {
   leftRegister.appendChild(iIcon)
   leftRegister.appendChild(pUser)
   leftRegister.appendChild(pDay)
+  leftRegister.appendChild(iReady)
 
   // Right Element
   const pType = document.createElement('p')
@@ -45,7 +50,8 @@ const _createRecord = ({ id, type, message, day, status }) => {
   if (status == 0) {
     divRegister.classList.add('notifyRegisterNoRead')
     divRegister.tag = status
-  }
+  } else
+    iReady.style.cssText += 'visibility: visible;'
   divRegister.appendChild(leftRegister)
   divRegister.appendChild(rightRegister)
 
@@ -68,6 +74,8 @@ const _createRecord = ({ id, type, message, day, status }) => {
                   .then(() => {
                     divRegister.tag = 1
                     timerUpdateRead = null
+                    const iReady = child.querySelector('.notifyReady')
+                    iReady.style.cssText += 'visibility: visible;'
                   })
               })
           }, 5000)

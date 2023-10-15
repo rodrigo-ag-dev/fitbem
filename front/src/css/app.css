@@ -329,6 +329,7 @@ P2:nth-child(1n + 2) {
 }
 
 .notifyRegister {
+  position: relative;
   display: flex;
   flex-direction: row;
   height: 98px;
@@ -369,7 +370,6 @@ P2:nth-child(1n + 2) {
 }
 
 .notifyMessage {
-  /* color: var(--secondary-color); */
   word-wrap: wrap;
 }
 
@@ -379,11 +379,17 @@ P2:nth-child(1n + 2) {
   margin-inline: 10px;
   min-width: 100px;
   text-align: center;
-  /* color: var(--secondary-color); */
 }
 
 .notifyDay {
   padding-inline: 10px;
   margin-inline: 10px;
-  /* color: var(--secondary-color); */
+}
+
+.notifyReady{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  visibility: hidden;
+  transition: visibility .3s;
 }
