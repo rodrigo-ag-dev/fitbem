@@ -314,3 +314,76 @@ P2:nth-child(1n + 2) {
   max-width: 200pt;
   text-align: center;
 }
+
+.notifyLeftRegister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.notifyRightRegister {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notifyRegister {
+  display: flex;
+  flex-direction: row;
+  height: 98px;
+  min-height: 98px;
+  max-height: 98px;
+  background-color: #EBEBEB;
+  border: 1px solid #D9D9D9;
+  border-bottom: 0px;
+  color: var(--secondary-color);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */ 
+}
+
+.notifyRegister:hover {
+  cursor: pointer;
+}
+
+.notifyRegister:last-child {
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.notifyRegisterSelected {
+  color: white;
+  background-color: var(--secundary-color-sel);
+}
+
+.notifyRegisterNoRead {
+  background-color: white;
+}
+
+.notifyIcon {
+  margin-inline: 10px;
+}
+
+.notifyType {
+  font-weight: bold;
+}
+
+.notifyMessage {
+  /* color: var(--secondary-color); */
+  word-wrap: wrap;
+}
+
+.notifyUser {
+  font-size: 22px;
+  padding-inline: 10px;
+  margin-inline: 10px;
+  min-width: 100px;
+  text-align: center;
+  /* color: var(--secondary-color); */
+}
+
+.notifyDay {
+  padding-inline: 10px;
+  margin-inline: 10px;
+  /* color: var(--secondary-color); */
+}

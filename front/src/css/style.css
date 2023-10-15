@@ -1,3 +1,41 @@
+:root {
+  --size: 10;
+  --color-one: #0d2c34;
+  --color-two: #0c4656;
+  --color-three: #236678;
+  --color-four: #4f808d;
+  --input-color: #ffffff;
+  --input-color-hover: #dfdfdf;
+  --input-bgcolor: #397383;
+  --splashMenu-bgcolor: #ffffff;
+  --primary-color: #4f808d;
+  --secondary-color: #236678;
+  --primary-color-sel: #0c4656;
+  --secundary-color-sel: #0d2c34;
+  --primary-text: #ffffff;
+}
+
+body.swal2-shown>[aria-hidden="true"] {
+  transition: 0.1s filter;
+  filter: blur(2px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  font-family: Poppins, sans-serif;
+}
+
+
+
 @property --nose {
   syntax: '<percentage>';
   initial-value: 0%;
@@ -56,41 +94,6 @@
 
 
 
-:root {
-  --size: 10;
-  --color-one: #0d2c34;
-  --color-two: #0c4656;
-  --color-three: #236678;
-  --color-four: #4f808d;
-  --input-color: #ffffff;
-  --input-color-hover: #dfdfdf;
-  --input-bgcolor: #397383;
-  --splashMenu-bgcolor: #ffffff;
-  --primary-color: #4f808d;
-  --secondary-color: #236678;
-  --primary-color-sel: #0c4656;
-  --secundary-color-sel: #0d2c34;
-  --primary-text: #ffffff;
-}
-
-body.swal2-shown>[aria-hidden="true"] {
-  transition: 0.1s filter;
-  filter: blur(2px);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #eeeeee;
-  font-family: Poppins, sans-serif;
-}
 
 button {
   border: 0;
