@@ -76,6 +76,7 @@ const _createRecord = ({ id, type, message, day, status }) => {
                     timerUpdateRead = null
                     const iReady = child.querySelector('.notifyReady')
                     iReady.style.cssText += 'visibility: visible;'
+                    notifyHealthCheck()
                   })
               })
           }, 5000)
@@ -91,7 +92,29 @@ const _createRecord = ({ id, type, message, day, status }) => {
   return divRegister
 }
 
+const notifyHealthCheck = () => {
+  fetch(_addressAPI + 'notification/count/' + _userId, { method: 'GET', headers: { "Authorization": "Bearer " + _token } })
+    .then(resp => {
+      resp.json()
+        .then(json => {
+          if (json) {
+            const btnNotify = document.querySelector('#btnNotify')
+            var notifyHealth = btnNotify.querySelector('.notifyHealth')
+            if (json.count > 0) {
+              if (!notifyHealth)
+                notifyHealth = document.createElement('div')
+              notifyHealth.classList.add('notifyHealth')
+              btnNotify.appendChild(notifyHealth)
+            } else if (notifyHealth)
+              notifyHealth.remove()
+          }
+        })
+    })
+}
+
 const baseNotify = (self) => {
+  notifyHealthCheck()
+
   const divCenter = document.createElement('div')
   divCenter.classList.add('appCenter')
 

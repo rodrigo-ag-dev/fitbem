@@ -23,56 +23,67 @@ const appDetail = () => {
   imgLogo.src = './src/images/logowhite.png'
 
   const btnIndex = createIconButton(
-    './src/images/index.png',
-    (self) => baseIndex(self),
-    true
+    {
+      icon: './src/images/index.png',
+      onClick: (self) => baseIndex(self),
+      defaultMenu: true
+    }
   )
 
   const btnHealth = createIconButton(
-    './src/images/health.png',
-    (self) => baseHealth(self)
+    {
+      icon: './src/images/health.png',
+      onClick: (self) => baseHealth(self)
+    }
   )
 
   const btnFitness = createIconButton(
-    './src/images/fitness.png',
-    (self) => baseFitness(self)
+    {
+      icon: './src/images/fitness.png',
+      onClick: (self) => baseFitness(self)
+    }
   )
 
   const btnPerson = createIconButton(
-    './src/images/person.png',
-    (self) => basePerson(self)
+    {
+      icon: './src/images/person.png',
+      onClick: (self) => basePerson(self)
+    }
   )
 
   const btnNotify = createIconButton(
-    './src/images/notify.png',
-    (self) => baseNotify(self)
+    {
+      icon: './src/images/notify.png',
+      onClick: (self) => baseNotify(self),
+      id: 'btnNotify'
+    }
   )
 
   const btnExit = createIconButton(
-    './src/images/exit.png',
-    (self) => {
-      Swal.fire({
-        title: 'Tem certeza que deseja sair?',
-        type: 'question',
-        showCancelButton: true,
-        customClass: 'customCalss',
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sim',
-        cancelButtonText: 'Não'
-      }).then((result) => {
-        if (result.value) {
-          localStorage.removeItem('name')
-          localStorage.removeItem('email')
-          localStorage.removeItem('userID')
-          localStorage.removeItem('token')
-          load()
-        }
-      })
-    },
-    false,
-    true,
-    false
+    {
+      icon: './src/images/exit.png',
+      onClick: (self) => {
+        Swal.fire({
+          title: 'Tem certeza que deseja sair?',
+          type: 'question',
+          showCancelButton: true,
+          customClass: 'customCalss',
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Sim',
+          cancelButtonText: 'Não'
+        }).then((result) => {
+          if (result.value) {
+            localStorage.removeItem('name')
+            localStorage.removeItem('email')
+            localStorage.removeItem('userID')
+            localStorage.removeItem('token')
+            load()
+          }
+        })
+      },
+      noSelected: true
+    }
   )
 
   const divLeft = document.createElement('div')

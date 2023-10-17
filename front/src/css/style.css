@@ -41,11 +41,13 @@ body {
   initial-value: 0%;
   inherits: false;
 }
+
 @property --tail {
   syntax: '<percentage>';
   initial-value: 0%;
   inherits: false;
 }
+
 .spinner {
   position: fixed;
   top: calc(calc(100vh / 2) - calc(var(--size) * 1vmin));
@@ -53,12 +55,10 @@ body {
   height: calc(var(--size) * 1vmin);
   width: calc(var(--size) * 1vmin);
   border-radius: 50%;
-  mask: conic-gradient(
-    from 45deg,
-    transparent 0 var(--tail),
-    #000 0 var(--nose),
-    transparent 0 var(--nose)
-  );
+  mask: conic-gradient(from 45deg,
+      transparent 0 var(--tail),
+      #000 0 var(--nose),
+      transparent 0 var(--nose));
   border-style: solid;
   border-width: 5vmin;
   border-top-color: var(--color-one);
@@ -79,11 +79,13 @@ body {
     --tail: 0%;
     --nose: 0%;
   }
+
   40%,
   60% {
     --nose: 100%;
     --tail: 0%;
   }
+
   100% {
     --nose: 100%;
     --tail: 100%;
@@ -183,4 +185,19 @@ button {
 
 .error .closebtn:hover {
   background-color: black;
+}
+
+.notifyHealth {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid red;
+  background-color: red;
+}
+
+.hidden {
+  visibility: hidden;
 }

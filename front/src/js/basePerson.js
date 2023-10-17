@@ -1,4 +1,6 @@
 const basePerson = (self) => {
+  notifyHealthCheck()
+  
   const divCenter = document.createElement('div')
   divCenter.classList.add('appCenter')
 

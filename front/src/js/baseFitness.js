@@ -1,4 +1,6 @@
 const baseFitness = (self) => {
+  notifyHealthCheck()
+
   const divCenter = document.createElement('div')
   divCenter.classList.add('appCenter')
   divCenter.style.cssText += 'justify-content: unset; flex: .98; flex-direction: row; flex-wrap: wrap;'

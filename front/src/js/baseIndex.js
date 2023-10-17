@@ -31,6 +31,8 @@ const avancarImagem = () => {
 }
 
 const baseIndex = (self) => {
+  notifyHealthCheck()
+  
   IdAvancarImagem = setInterval(() => avancarImagem(), timerInterval)
 
   const divTop = document.createElement('div')

@@ -24,13 +24,17 @@ const load = () => {
 
 window.addEventListener('load', load)
 
-const createIconButton = (icon, onClick, defaultMenu = false, noSelected = false, clearTimer = true) => {
+const createIconButton = ({ icon, onClick, defaultMenu, noSelected, id }, clearTimer = true) => {
   const imgIcon = document.createElement('img')
   imgIcon.src = icon
 
   const btnIcon = document.createElement('button')
   btnIcon.classList.add('iconButton')
   btnIcon.appendChild(imgIcon)
+
+  if (id)
+    btnIcon.id = id
+
   if (onClick)
     btnIcon.addEventListener('click', () => {
       if (clearTimer) {

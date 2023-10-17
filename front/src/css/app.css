@@ -196,6 +196,7 @@
 }
 
 .iconButton {
+  position: relative;
   width: 4.5em;
   height: 4.5em;
   min-height: 4.5em;
