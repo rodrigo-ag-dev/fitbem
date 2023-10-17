@@ -31,8 +31,8 @@
 * Instale as dependências **yarn install**;
 
 * Crie o arquivo **.env** na pasta **back**, e inclua o conteúdo abaixo
-  _ NODE_DB_CLIENT='sqlite3'
-  _ NODE_DB_FILENAME='./src/database/sqlite.db'
+  - NODE_DB_CLIENT='sqlite3'
+  - NODE_DB_FILENAME='./src/database/sqlite.db'
 
 * Para instanciar o serviço em máquina local, use o comando **yarn dev**
 
