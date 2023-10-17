@@ -28,6 +28,7 @@
 ### Preparando o backend - API
 * Pelo console (Windows use o PowerShell ou CMD; Linux ou MacOS use o Terminal.) Acesse a pasta onde você fez o clone do git e em seguida acesse a subpasta **back**.
 * Instale as dependências **yarn install**;
+* Crie o arquivo .env na pasta **back**
 * Para instanciar o serviço em máquina local, use o comando **yarn dev**
 
 ### Visualizando o portal
