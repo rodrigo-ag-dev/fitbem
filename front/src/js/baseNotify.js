@@ -130,15 +130,14 @@ const baseNotify = (self) => {
     .then(resp => {
       resp.json()
         .then(json => {
-          if (json.data) {
+          if (json.data)
             json.data.forEach(e => divCenter.appendChild(_createRecord(e)))
-          }
           appBase.innerHTML = null
           appBase.appendChild(divCenter)
         })
     })
     .finally(() => {
-      divCenter.style.cssText += `justify-content: start; flex: .98;overflow: scroll;`
+      divCenter.style.cssText += `justify-content: start; flex: .98; overflow: scroll; scroll-margin: 10px;`
       spinner.remove()
     })
 }
