@@ -27,8 +27,13 @@
 
 ### Preparando o backend - API
 * Pelo console (Windows use o PowerShell ou CMD; Linux ou MacOS use o Terminal.) Acesse a pasta onde você fez o clone do git e em seguida acesse a subpasta **back**.
+
 * Instale as dependências **yarn install**;
-* Crie o arquivo .env na pasta **back**
+
+* Crie o arquivo **.env** na pasta **back**, e inclua o conteúdo abaixo
+NODE_DB_CLIENT='sqlite3'
+NODE_DB_FILENAME='./src/database/sqlite.db'
+
 * Para instanciar o serviço em máquina local, use o comando **yarn dev**
 
 ### Visualizando o portal
