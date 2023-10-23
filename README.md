@@ -38,3 +38,14 @@
 
 ### Visualizando o portal
 * Basta abrir, em seu navegador preferido, o arquivo **index.html** contido dentro da subpasta **front** da pasta você fez o clone
+
+### Integrantes
+* ANA CAROLINE GONZAGA ACQUESTA
+* BRUNO RICHARDS BERNARDO DOS SANTOS
+* CARLA SETRA SANTOS
+* CLAITON RODRIGO DA SILVA GOMES
+* MARCOS MANSI
+* PEDRO HENRIQUE OLIVEIRA SOUTO DA SILVA
+* RENAN AMARAL LIMA DE MEDEIROS
+* RODRIGO ALEXANDRE GONCALVES
+
