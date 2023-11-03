@@ -1,6 +1,6 @@
 .splashBody {
   position: relative;
-  width: 1376px;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -69,7 +69,7 @@
 .splashDetail {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 68px);
   background-color: #cedfef;
   background-size: cover;
 }
@@ -157,7 +157,9 @@
 }
 
 .aboutDetail {
-  padding: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   height: calc(100% - 227px);
   background-color: #f6f6f6;
@@ -190,7 +192,6 @@
   font-weight: bold;
   font-size: 20px;
   color: var(--primary-text);
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -204,24 +205,24 @@
 }
 
 .about1 {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  left: 276px;
-  top: 221px;
-  width: 296px;
-  height: 264px;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
   background-image: url('../images/about1.png');
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .about2 {
-  position: absolute;
-  right: 74px;
-  bottom: 227px;
-  width: 433px;
-  height: 649px;
+  width: 50%;
+  height: 100%;
   background-image: url('../images/about2.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .aboutTitle {
@@ -246,7 +247,7 @@
 }
 
 .aboutDetailName {
-  margin-top: 70px;
+  margin-top: 20px;
   font-size: 60px;
   font-weight: bold;
   color: var(--primary-color);
@@ -256,12 +257,13 @@
   margin-top: 15px;
   font-size: 26px;
   font-weight: 100;
+  text-align: center;
   color: var(--primary-color);
-  width: 647px;
+  width: 547px;
 }
 
 .aboutDetailText {
-  margin-top: 85px;
+  margin-top: 20px;
   font-size: 22px;
   font-weight: 700;
   color: var(--primary-color);
@@ -276,6 +278,9 @@
   width: 100%;
   height: 100%;
   background-color: #f6f6f6;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .screenLeft {
@@ -291,6 +296,8 @@
   width: calc(100% - 675px);
   height: 100%;
   background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .contato {
@@ -342,7 +349,7 @@
 }
 
 .screenTop {
-  margin-top: 107px;
+  margin-top: 50px;
   flex-direction: column;
   display: flex;
   align-items: center;

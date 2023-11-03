@@ -243,6 +243,7 @@ const splashContact = () => {
       screenLeft.classList.add('contato')
 
       const screenRight = document.querySelector('.screenRight')
+      screenRight.classList.add('screen')
       screenRight.appendChild(form)
 
       name.focus()
