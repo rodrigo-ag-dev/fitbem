@@ -33,6 +33,8 @@
 * Crie o arquivo **.env** na pasta **back**, e inclua o conteúdo abaixo
   - NODE_DB_CLIENT='sqlite3'
   - NODE_DB_FILENAME='./src/database/sqlite.db'
+ 
+* Para criar o banco de dados, use o comando **npx knex migrate:latest**
 
 * Para instanciar o serviço em máquina local, use o comando **yarn dev**
 
