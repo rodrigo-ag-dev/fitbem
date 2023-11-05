@@ -43,4 +43,7 @@ routes.delete('/history/:id', history.remove)
 routes.get('/specialty', category.specialty)
 routes.get('/kindservice', category.kindservice)
 
+routes.get('/city', category.city)
+routes.get('/state', category.state)
+
 module.exports = routes

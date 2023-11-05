@@ -1,6 +1,24 @@
 const connection = require('../database/connection.js')
 
 module.exports = {
+  async city(req, res) {
+    const data = await connection('city')
+      .select(['id', 'description'])
+      .groupBy('description')
+      .orderBy('description')
+    if (!data || data.length == 0)
+      return res.status(401).json({ error: 'Sem dados.' })
+    return res.status(200).json({ data })
+  },
+  async state(req, res) {
+    const data = await connection('city')
+      .select(['state'])
+      .groupBy('state')
+      .orderBy('state')
+    if (!data || data.length == 0)
+      return res.status(401).json({ error: 'Sem dados.' })
+    return res.status(200).json({ data })
+  },
   async specialty(req, res) {
     const data = await connection('category')
       .select('*')
