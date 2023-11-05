@@ -284,7 +284,9 @@
 }
 
 .screenLeft {
-  width: 675px;
+  flex: .5;
+  display: flex;
+  justify-content: center;
   height: 100%;
   background-color: var(--primary-color);
   scroll-behavior: smooth;
@@ -293,7 +295,7 @@
 }
 
 .screenRight {
-  width: calc(100% - 675px);
+  flex: .5;
   height: 100%;
   background-color: var(--primary-color);
   display: flex;
@@ -303,6 +305,8 @@
 .contato {
   overflow: hidden;
   background-image: url('../images/contato.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cadastro {

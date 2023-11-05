@@ -162,7 +162,10 @@ const splashAbout = () => {
 
 const slogan = () => {
   const splashDetail = document.querySelector('.splashDetail')
-  splashDetail.style.cssText += "background-image: url('./src/images/wallpaper.jpg');"
+  splashDetail.style.cssText += `background-image: url('./src/images/wallpaper.jpg'); 
+                                 background-repeat: no-repeat;
+                                 background-size: cover;');
+                                `
   splashDetail.innerHTML = null
   splashDetail.appendChild(splashSlogan())
 }
