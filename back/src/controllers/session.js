@@ -1,48 +1,43 @@
-const jwt = require('jsonwebtoken')
 const connection = require('../database/connection.js')
-const authConfig = require('../config/auth.json')
 
 module.exports = {
+  async index(req, res) {
+    const data = await connection('user').select('*').orderBy('name')
+    return res.json(data)
+  },
+  async get(req, res) {
+    const { email } = req.params
+    const data = await connection('user').select('id').where(`email`, email)
+    if (!data || data.length == 0)
+      return res.status(401).json({ error: 'Operação não permitida.' })
+    return res.status(200).json({ ok: 'ok.' })
+  },
+  async delete(req, res) {
+    const { id } = req.params
+    const incident = await connection('user').where('id', id).first()
+    if (!incident.id)
+      return res.status(401).json({ error: 'Operação não permitida.' })
+
+    await connection('user').where('id', id).delete()
+
+    return res.status(204).send()
+  },
   async create(req, res) {
-    const { email, password } = req.headers
-    if (!email)
-      return res.status(401).json({ error: 'Informe um e-mail.' })
+    const { name, lastName, phone, gender, weight, height, email, password } = JSON.parse(req.headers.body)
+    const resp = await connection('user')
+      .insert({ name, lastName, phone, gender, weight, height, email, password })
+    try {
+      const resp = await connection('user')
+        .select('id')
+        .where({ email }).andWhere({ password })
+        .first()
 
-    if (!password)
-      return res.status(401).json({ error: 'Informe a senha.' })
-
-    const reg = await connection('user')
-      .select(['id', 'name', 'lastName', 'email', 'height', 'weight', 'password'])
-      .where('email', email)
-      .first()
-
-    console.log('reg', reg)
-
-    if (!reg)
-      return res.status(401).json({ error: 'Usuário não encontrado!' })
-
-    if (password != reg.password)
-      return res.status(401).json({ error: 'Não autorizado, verifique o usuário e a senha.' })
-
-    reg.password = undefined
-
-    const token = jwt.sign({ id: res.id }, authConfig.secret, { expiresIn: '9999 years' })
-
-    return res.send({ reg, token })
-  },
-
-  async recordcount(req, res) {
-    const { table } = req.params
-    if (table) {
-      try {
-        const data = await connection(table).count('id as count').where({ "hidden": false }).orWhere({ "hidden": null }).first()
-        if (data)
-          return res.status(200).json({ recordCount: data.count })
-      } catch (error) {
-        console.log('error', error)
-        return res.status(500).json({ recordCount: 0 })
-      }
+      const calc = (weight / (height ? ((height / 100) * (height / 100)) : 1)).toFixed(0)
+      const hist = await connection('history')
+        .insert({ iduser: resp.id, day: new Date().toISOString(), height, weight, bmi: calc })
+    } catch (error) {
+      console.log(error)
     }
-    return res.status(200).json({ recordCount: 0 })
-  },
+    return res.status(200).json({ id: resp[0] })
+  }
 }
