@@ -7,6 +7,7 @@ const history = require('./controllers/history.js')
 const health = require('./controllers/health.js')
 const trainer = require('./controllers/trainer.js')
 const notification = require('./controllers/notification.js')
+const category = require('./controllers/category.js')
 
 const routes = express()
 routes.use(express.json())
@@ -38,5 +39,8 @@ routes.get('/history', history.get)
 routes.put('/history', history.update)
 routes.post('/history', history.insert)
 routes.delete('/history/:id', history.remove)
+
+routes.get('/specialty', category.specialty)
+routes.get('/kindservice', category.kindservice)
 
 module.exports = routes
