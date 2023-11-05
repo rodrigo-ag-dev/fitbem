@@ -4,7 +4,7 @@ module.exports = {
   async city(req, res) {
     const data = await connection('city')
       .select(['id', 'description'])
-      .groupBy('description')
+      .distinctOn(['id', 'description'])
       .orderBy('description')
     if (!data || data.length == 0)
       return res.status(401).json({ error: 'Sem dados.' })
