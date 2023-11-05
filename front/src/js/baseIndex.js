@@ -32,7 +32,7 @@ const avancarImagem = () => {
 
 const baseIndex = (self) => {
   notifyHealthCheck()
-  
+
   IdAvancarImagem = setInterval(() => avancarImagem(), timerInterval)
 
   const divTop = document.createElement('div')
@@ -228,7 +228,7 @@ const createIndex = (divDash) => {
   const divRow2 = divDash.querySelector('.divRow2')
   divRow2.appendChild(divState)
 
-  pValueWeigth.innerHTML = _weight.split('.')[0] + ' kg'
+  pValueWeigth.innerHTML = _weight && typeof _weight == String ? _weight.split('.')[0] : _weight + ' kg'
   pValueBMI.innerHTML = _bmi
   pValueHeight.innerHTML = _height / 100 + ' m'
   divState.innerHTML = BMIStatus(_bmi)
