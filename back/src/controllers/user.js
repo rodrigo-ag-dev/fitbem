@@ -25,6 +25,8 @@ module.exports = {
   async create(req, res) {
     const { name, lastName, phone, gender, weight, height, email, password } = JSON.parse(req.headers.body)
     const resp = await connection('user').insert({ name, lastName, phone, gender, weight, height, email, password })
-    return res.status(200).json({ id: resp.id })
+    const calc = (weight / (height ? ((height / 100) * (height / 100)) : 1))
+    const hist = await connection('history').insert({ iduser: resp[0], day: new Date().toISOString(), height, weight, bmi: calc })
+    return res.status(200).json({ id: resp[0] })
   }
 }

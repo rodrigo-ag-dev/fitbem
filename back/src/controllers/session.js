@@ -16,6 +16,8 @@ module.exports = {
       .where('email', email)
       .first()
 
+    console.log('reg', reg)
+
     if (!reg)
       return res.status(401).json({ error: 'Usuário não encontrado!' })
 
