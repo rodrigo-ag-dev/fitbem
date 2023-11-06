@@ -93,7 +93,8 @@ const splashAbout = () => {
 
   const footerTitle1 = document.createElement('p')
   footerTitle1.classList.add('footerTitle')
-  footerTitle1.innerHTML = 'CALCULADORA IMC COM HISTÓRICO'
+  footerTitle1.innerHTML = `<img src="./src/images/calc.png" alt="">
+                            <p>CALCULADORA IMC COM HISTÓRICO</p>`
 
   const footerText1 = document.createElement('p')
   footerText1.classList.add('footerText')
@@ -106,7 +107,8 @@ const splashAbout = () => {
 
   const footerTitle2 = document.createElement('p')
   footerTitle2.classList.add('footerTitle')
-  footerTitle2.innerHTML = 'ACESSO A PROFISSIONAIS DE SAÚDE'
+  footerTitle2.innerHTML = `<img src="./src/images/profissional.png" alt="">
+                            <p>ACESSO A PROFISSIONAIS DE SAÚDE</p>`
 
   const footerText2 = document.createElement('p')
   footerText2.classList.add('footerText')

@@ -7,12 +7,12 @@ html {
   --color-one: #0d2c34;
   --color-two: #0c4656;
   --color-three: #236678;
-  --color-four: #4f808d;
+  --color-four: #4F808D;
   --input-color: #ffffff;
   --input-color-hover: #dfdfdf;
   --input-bgcolor: #397383;
   --splashMenu-bgcolor: #ffffff;
-  --primary-color: #4f808d;
+  --primary-color: #4F808D;
   --secondary-color: #236678;
   --primary-color-sel: #0c4656;
   --secundary-color-sel: #0d2c34;
@@ -29,6 +29,7 @@ body.swal2-shown>[aria-hidden="true"] {
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
