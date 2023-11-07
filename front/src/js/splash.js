@@ -285,7 +285,7 @@ const register = async (name, lastName, phone, gender, weight, height, email, pa
       splashLogin()
     } else {
       console.log(resp)
-      createMessage('Ocorreu um erro ao cadastra esse usuário, tente novamente mais tarde!', 'error')
+      createMessage('Ocorreu um erro ao cadastrar esse usuário, tente novamente mais tarde!', 'error')
     }
   }
   catch (e) {
@@ -322,7 +322,7 @@ const splashRegister = () => {
         ]
       )
 
-      const user = createInput('e-mail', 'email', null, 'margin-bottom-minimal')
+      const user = createInput('E-mail', 'email', null, 'margin-bottom-minimal')
       const pass1 = createInput('Senha', 'password', null, 'margin-bottom-minimal')
       const pass2 = createInput('Repita a senha', 'password', null, 'margin-bottom-minimal')
 
@@ -381,7 +381,7 @@ const splashLogin = () => {
     (form) => {
       const user = createInput('E-mail', 'email', './src/images/mail.png')
       const pass = createInput('Senha', 'password', './src/images/lock.png')
-      const enter = createButton('ENTRAR',
+      const enter = createButton('Entrar',
         () => {
           const screenBottom = form.querySelector('.screenBottom')
           login({ email: screenBottom.children[0].value, password: screenBottom.children[1].value })

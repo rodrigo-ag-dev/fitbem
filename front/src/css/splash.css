@@ -137,7 +137,7 @@
   align-items: center;
   place-content: center;
   width: 100%;
-  max-width: 448px;
+  max-width: 535px;
   height: 68px;
   min-height: 68px;
   margin-bottom: 15px;
@@ -151,25 +151,27 @@
 }
 
 .aboutBody {
+  /* CORPO TOTAL SOBRE */
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: red;
 }
 
 .aboutDetail {
+  /* MEIO SOBRE */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  height: calc(100% - 227px);
+  height: calc(100% - 230px);
   background-color: #f6f6f6;
   overflow: hidden;
 }
 
 .aboutFooter {
+  /* DIV ESQ E DIR FOOTER SOBRE */
   position: relative;
   display: flex;
   flex-direction: row;
@@ -179,6 +181,7 @@
 }
 
 .aboutFooterDiv {
+  /* DIV ESQ FOOTER SOBRE */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,10 +191,12 @@
 }
 
 .aboutFooter div:last-of-type {
+  /* DIV DIREITA FOOTER SOBRE */
   background-color: var(--primary-color);
 }
 
 .footerTitle {
+  /* TÍTULO ESQ E DIR FOOTER SOBRE */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,10 +205,14 @@
   font-size: 20px;
   letter-spacing: 1px;
   color: var(--primary-text);
+  text-align: center;
+  margin: 0 10px;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .footerText {
+  /* TEXTO ESQ E DIR FOOTER SOBRE */
   display: flex;
   text-align: center;
   font-size: 18px;
@@ -211,10 +220,12 @@
   letter-spacing: 1px;
   color: var(--primary-text);
   margin-top: 56px;
+  padding: 10px;
   max-width: 619px;
 }
 
 .about1 {
+  /* TELA ESQUERDA SOBRE */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,15 +238,18 @@
 }
 
 .about2 {
+  /* TELA DIREITA SOBRE */
   width: 50%;
   height: 100%;
   background-image: url('../images/about2.png');
-  background-size: contain;
+  background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 70%;
+  z-index: 1;
 }
 
-.aboutTitle {
+/* .aboutTitle {
   position: absolute;
   left: 40px;
   top: 100px;
@@ -254,9 +268,10 @@
   color: var(--primary-color);
   margin-left: 40px;
   max-width: 450px;
-}
+} */
 
 .aboutDetailName {
+  /* TÍTULO PÁGINA SOBRE */
   margin-top: 20px;
   font-size: 60px;
   font-weight: bold;
@@ -265,6 +280,8 @@
 }
 
 .aboutDetailTitle {
+  /* SUBTÍTULO PÁGINA SOBRE */
+  margin: 0 20px;
   margin-top: 15px;
   font-size: 26px;
   letter-spacing: 1px;
@@ -274,6 +291,7 @@
 }
 
 .aboutDetailText {
+  /* TEXTO PÁGINA SOBRE */
   margin-top: 78px;
   font-size: 22px;
   font-weight: 500;
@@ -284,22 +302,25 @@
 }
 
 .screen {
+  /* TELA GERAL CONTATO, CADASTRO E LOGIN */
   position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
-  background-color: #f6f6f6;
+  background-color: var(--primary-color);
   scroll-behavior: smooth;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 .screenLeft {
+  /* TELA ESQUERDA CONTATO, CADASTRO E LOGIN */
   flex: .5;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 100%;
+  align-items: center;
   background-color: var(--primary-color);
   scroll-behavior: smooth;
   overflow-y: auto;
@@ -307,41 +328,49 @@
 }
 
 .screenRight {
+  /* TELA DIREITA CONTATO, CADASTRO E LOGIN */
   flex: .5;
-  height: 100%;
   background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contato {
+  /* PLANO DE FUNDO CONTATO */
   overflow: hidden;
   background-image: url('../images/contato.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
-  opacity: 70%;
+  background-position: calc(50% + 30%);
+  opacity: 60%;
 }
 
 .cadastro {
+  /* PLANO DE FUNDO CADASTRO */
   overflow: hidden;
   background-image: url('../images/create.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  opacity: 60%;
 }
 
 .login {
+  /* PLANO DE FUNDO LOGIN */
   overflow: hidden;
   background-image: url('../images/login.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: left;
+  opacity: 60%;
 }
 
 .logo {
-  width: 96px;
-  height: 86px;
-  min-height: 86px;
+  /* LOGO BRANCO CONTATO, CADASTRO E LOGIN */
+  width: 90px;
+  height: 80px;
   background-image: url('../images/logowhite.png');
   background-position-x: center;
   background-size: contain;
@@ -349,16 +378,30 @@
 }
 
 .title {
+  /* TITULO CONTATO, CADASTRO E LOGIN */
   font-size: 40px;
-  margin-block: 15px;
+  margin-block: 20px;
+  font-weight: 500;
 }
 
 .text {
+  /* SUBTITULO LOGIN */
   font-size: 20px;
+  font-weight: 500;
+}
+
+.text a {
+  /* LINK SUBTITULO LOGIN */
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary-color-sel);
+  text-decoration: none;
 }
 
 .forget {
+  /* ESQUECEU A SENHA LOGIN */
   font-size: 20px;
+  font-weight: 500;
   text-align: right;
   width: 100%;
   max-width: 448px;
@@ -367,36 +410,38 @@
 }
 
 .forget:hover {
+  /* ESQUECEU A SENHA LOGIN */
   cursor: pointer;
   color: var(--input-color-hover);
 }
 
 .screenTop {
-  margin-top: 50px;
+  /* DIV LOGO + TEXTOS CONTATO, CADASTRO E LOGIN */
+  margin-top: 60px;
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary-text);
-  font-size: 40px;
-  max-height: 20%;
+  margin-bottom: 30px;
 }
 
 .screenBottom {
+  /* FORMS CONTATO, CADASTRO E LOGIN */
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  margin-top: 50px;
-  max-height: calc(100vh - 200px);
+  justify-content: center;
+  gap: 5px;
+  width: 448px;
 }
 
 .comboField,
 .inputField {
+  /* INPUTS FORMS CONTATO, CADASTRO E LOGIN */
   width: 100%;
   height: 68px;
-  max-width: 448px;
-  margin-bottom: 33px;
+  margin-bottom: 20px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 3px solid transparent;
