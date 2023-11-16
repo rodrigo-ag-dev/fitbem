@@ -483,7 +483,7 @@ P2:nth-child(1n + 2) {
   cursor: pointer;
 }
 
-.selectEspecialidade, .selectCidade, .selectEstado {
+.selectEspecialidade, .selectCidade, .selectEstado, .selectTipoServico {
   height: 51px;
   background-color: #FFFFFF;
   border: none;
@@ -491,4 +491,94 @@ P2:nth-child(1n + 2) {
   color: gray;
   padding-left: 1rem;
   width: 200px;
+}
+
+/*Preparadores Físicos*/
+
+
+.headerFitness {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  color: #4F808D;
+}
+
+.headerFitness > .headerFitnessMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerFitness > .headerFitnessMain > h1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.headerFitness > .headerFitnessMain > .userInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerFitness > .headerFitnessMain > .userInfo > h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.headerFitness > .headerFitnessMain > .userInfo > .imgUser {
+  background-color: #236678;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.headerFitness > .filterFitness {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 51px;
+  margin-top: 1rem;
+}
+
+.headerFitness > .filterFitness > .filterFitnessSearch {
+  background-color: #FFFFFF;
+  border-radius: .5rem 0 0 .5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 51px;
+}
+
+.headerFitness > .filterFitness > .filterFitnessSearch > .searchIconImg {
+  background-image: url('../images/search.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+  border-image: 0px;
+}
+
+.headerFitness > .filterFitness > .filterFitnessSearch > .inputSearchFitness {
+  height: 100%;
+  width: 300px;
+  border-radius: .5rem;
+  border: 0 none;
+  outline: 0;
+}
+
+.headerFitness > .filterFitness > .filterFitnessSearch > .buttonSearch {
+  background-color: #4F808D;
+  color: #FFFFFF;
+  height: 100%;
+  width: 117px;
+  border-radius: 0 .5rem .5rem 0;
+  font-size: 1rem;
+  cursor: pointer;
 }
