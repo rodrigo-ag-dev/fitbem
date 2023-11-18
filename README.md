@@ -26,27 +26,29 @@
 * Usando o git, faça um clone do projeto: https://github.com/rodrigo-ag-dev/fitbem
 
 ### Preparando o backend - API
-* Pelo console (Windows use o PowerShell ou CMD; Linux ou MacOS use o Terminal.) Acesse a pasta onde você fez o clone do git e em seguida acesse a subpasta **back**.
+* Pelo console (Windows use o PowerShell ou CMD; Linux ou MacOS use o Terminal.) Acesse a pasta onde você fez o clone do git e em seguida acesse a subpasta:
+  - **back**.
 
-* Instale as dependências **yarn install**;
+* Instale as dependências:
+  - **yarn install**;
 
 * Crie o arquivo **.env** na pasta **back**, e inclua o conteúdo abaixo
   - NODE_DB_CLIENT='sqlite3'
   - NODE_DB_FILENAME='./src/database/sqlite.db'
  
-* Para criar o banco de dados, use o comando **npx knex migrate:latest**
+* Para criar o banco de dados, use o comando:
+  - **npx knex migrate:latest**
 
-* Para instanciar o serviço em máquina local, use o comando **yarn dev**
+* Para instanciar o serviço em máquina local, use o comando:
+  - **yarn dev**
 
 ### Visualizando o portal
 * Basta abrir, em seu navegador preferido, o arquivo **index.html** contido dentro da subpasta **front** da pasta você fez o clone
 
 ### Integrantes do grupo 01
 * ANA CAROLINE GONZAGA ACQUESTA
-* BRUNO RICHARDS BERNARDO DOS SANTOS
 * CARLA SETRA SANTOS
 * CLAITON RODRIGO DA SILVA GOMES
-* MARCOS MANSI
 * PEDRO HENRIQUE OLIVEIRA SOUTO DA SILVA
 * RENAN AMARAL LIMA DE MEDEIROS
 * RODRIGO ALEXANDRE GONCALVES
