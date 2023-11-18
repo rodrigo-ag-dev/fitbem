@@ -396,12 +396,14 @@ P2:nth-child(1n + 2) {
   transition: visibility .3s;
 }
 
+/*Profissionais da Saúde*/
+
 .headerHealth {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 50px;
+  height: 110px;
   color: #4F808D;
 }
 
@@ -495,13 +497,12 @@ P2:nth-child(1n + 2) {
 
 /*Preparadores Físicos*/
 
-
 .headerFitness {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 50px;
+  height: 110px;
   color: #4F808D;
 }
 
