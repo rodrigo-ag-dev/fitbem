@@ -26,9 +26,11 @@
 * Usando o git, faça um clone do projeto: https://github.com/rodrigo-ag-dev/fitbem
 
 ### Preparando o backend - API
-* Pelo console (Windows use o PowerShell ou CMD; Linux ou MacOS use o Terminal.) Acesse a pasta onde você fez o clone do git e em seguida acesse a subpasta **back**.
+* Pelo console (Windows use o PowerShell ou CMD; Linux ou MacOS use o Terminal.) Acesse a pasta onde você fez o clone do git e em seguida acesse a subpasta:
+  - **back**.
 
-* Instale as dependências **yarn install**;
+* Instale as dependências:
+  - **yarn install**;
 
 * Crie o arquivo **.env** na pasta **back**, e inclua o conteúdo abaixo
   - NODE_DB_CLIENT='sqlite3'
