@@ -10,7 +10,7 @@ module.exports = {
     if (!password)
       return res.status(401).json({ error: 'Informe a senha.' })
     const reg = await connection('user')
-      .select(['id', 'name', 'lastName', 'email', 'height', 'weight', 'password'])
+      .select(['id', 'name', 'lastname', 'email', 'height', 'weight', 'password'])
       .where('email', email)
       .first()
     if (!reg)

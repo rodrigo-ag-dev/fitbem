@@ -2,7 +2,7 @@ exports.up = function (knex) {
     return knex.schema.createTable('user', (t) => {
         t.increments('id').notNullable().primary();
         t.string('name', 55)
-        t.string('lastName', 200)
+        t.string('lastname', 200)
         t.string('phone', 50)
         t.string('gender', 1)
         t.string('email', 255)

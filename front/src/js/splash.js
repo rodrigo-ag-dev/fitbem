@@ -256,10 +256,10 @@ const splashContact = () => {
 
 }
 
-const register = async (name, lastName, phone, gender, weight, height, email, pass1, pass2) => {
+const register = async (name, lastname, phone, gender, weight, height, email, pass1, pass2) => {
   const _body = JSON.stringify({
     name: name.value,
-    lastName: lastName.value,
+    lastname: lastname.value,
     phone: phone.value,
     gender: gender.value,
     weight: weight.value,
@@ -274,7 +274,7 @@ const register = async (name, lastName, phone, gender, weight, height, email, pa
     const resp = await fetchWithTimeout(_addressAPI + 'user', { method: 'POST', headers: { body: _body } })
     if (resp && resp.status == 200) {
       name.value = ''
-      lastName.value = ''
+      lastname.value = ''
       phone.value = ''
       gender.value = 'M'
       weight.value = ''
