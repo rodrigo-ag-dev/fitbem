@@ -34,19 +34,19 @@
   - NODE_DB_CLIENT='sqlite3'
   - NODE_DB_FILENAME='./src/database/sqlite.db'
  
-* Para criar o banco de dados, use o comando **npx knex migrate:latest**
+* Para criar o banco de dados, use o comando:
+  - **npx knex migrate:latest**
 
-* Para instanciar o serviço em máquina local, use o comando **yarn dev**
+* Para instanciar o serviço em máquina local, use o comando:
+  - **yarn dev**
 
 ### Visualizando o portal
 * Basta abrir, em seu navegador preferido, o arquivo **index.html** contido dentro da subpasta **front** da pasta você fez o clone
 
 ### Integrantes do grupo 01
 * ANA CAROLINE GONZAGA ACQUESTA
-* BRUNO RICHARDS BERNARDO DOS SANTOS
 * CARLA SETRA SANTOS
 * CLAITON RODRIGO DA SILVA GOMES
-* MARCOS MANSI
 * PEDRO HENRIQUE OLIVEIRA SOUTO DA SILVA
 * RENAN AMARAL LIMA DE MEDEIROS
 * RODRIGO ALEXANDRE GONCALVES
