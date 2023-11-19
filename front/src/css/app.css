@@ -583,3 +583,121 @@ P2:nth-child(1n + 2) {
   font-size: 1rem;
   cursor: pointer;
 }
+
+/*Tela Meus Dados*/
+
+.headerPerson {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  color: #4F808D;
+}
+
+.headerPerson > .headerPersonMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerPerson > .headerPersonMain > h1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.headerPerson > .headerPersonMain > .userInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerPerson > .headerPersonMain > .userInfo > h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.headerPerson > .headerPersonMain > .userInfo > .imgUser {
+  background-color: #236678;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.personMain {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: auto;
+  padding: 20px;
+  height: 500px;
+  position: absolute;
+  margin: 70px 30px 30px 30px;
+  width: 90%;
+  gap: 15px;
+}
+
+.personMain > .foto {
+  background-color: rgba(98, 100, 100, 0.267);
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  border-radius: 50%;
+  border: .1rem solid #236678;
+  margin: 50px 800px 0 0;
+}
+
+.personMain > .foto > .camera {
+  background-image: url('../images/camera.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-image: 0px;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 90px;
+}
+
+.personMain > .editIcon {
+  background-image: url('../images/edit.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  margin-left: 1rem;
+  border-image: 0px;
+  cursor: pointer;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.linha {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  justify-content: space-between;
+}
+
+.campo > input, .campo > select {
+  border-radius: .5rem;
+  border: .1rem solid #83a6af;
+  padding: .4rem .8rem;
+}
+
+.campo > select {
+  background-color: #FFFFFF;
+}
+
+.campo > label {
+  font-size: .8rem;
+}
+
+
