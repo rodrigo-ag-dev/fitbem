@@ -257,7 +257,7 @@ const splashContact = () => {
 }
 
 const register = async (name, lastname, phone, gender, weight, height, email, pass1, pass2) => {
-  const _body = JSON.stringify({
+  const _body = {
     name: name.value,
     lastname: lastname.value,
     phone: phone.value,
@@ -266,12 +266,19 @@ const register = async (name, lastname, phone, gender, weight, height, email, pa
     height: height.value,
     email: email.value,
     password: pass1.value
-  })
+  }
 
   if (pass1.value != pass2.value)
     throw 'As senhas estão diferentes!'
   try {
-    const resp = await fetchWithTimeout(_addressAPI + 'user', { method: 'POST', headers: { body: _body } })
+    const resp = await fetchWithTimeout(_addressAPI + 'user',
+      {
+        method: 'POST',
+        body: JSON.stringify(_body),
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+      }
+    )
+
     if (resp && resp.status == 200) {
       name.value = ''
       lastname.value = ''

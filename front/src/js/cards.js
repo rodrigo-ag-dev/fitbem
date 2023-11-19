@@ -52,7 +52,8 @@ const createCardProfessional = ({ image, name, city, phone, specialty, category 
 
   const divCat = document.createElement('div')
   divCat.style.cssText += `
-    position: absolute;
+    position: relative;
+    top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +74,7 @@ const createCardProfessional = ({ image, name, city, phone, specialty, category 
   cardInternal.style.cssText += `
     padding: 15px;
     padding-top: 27px;
-    width : 343px;
+    width : 333px;
     height: 210px;
     max-height: 210px;
     border-radius: 20px;
