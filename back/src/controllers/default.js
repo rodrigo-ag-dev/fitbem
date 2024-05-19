@@ -32,7 +32,7 @@ const update = async (table, req, res, requiredFields) => {
 
 const get = async (table, req, res, filter = null, useHiddenFilter = true, idField = null, orderField = null) => {
   const data = async () => {
-    const { id } = req.params
+    const { id } = req.query
     const { name, description, fields, hidden } = req.query
     const keyField = idField ? idField : 'id'
 

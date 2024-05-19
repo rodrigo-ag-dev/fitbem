@@ -2,7 +2,12 @@ const connection = require('../database/connection.js')
 
 module.exports = {
   async index(req, res) {
-    const data = await connection('user').select('*').orderBy('name')
+    const { id } = req.query
+    let data = null
+    if (id)
+      data = await connection('user').select('*').where('id', id).orderBy('name')
+    else
+      data = await connection('user').select('*').orderBy('name')
     return res.json(data)
   },
   async get(req, res) {
@@ -24,9 +29,9 @@ module.exports = {
   },
   async create(req, res) {
     const { name, lastname, phone, gender, weight, height, email, password } = req.body
-    const resp = await connection('user').insert({ name, lastname, phone, gender, weight, height, email, password })
+    const resp = await connection('user').insert({ name, lastname, phone, gender, weight, height, email, password }).returning('id')
     const calc = (weight / (height ? ((height / 100) * (height / 100)) : 1)).toFixed(0)
-    const hist = await connection('history').insert({ iduser: resp[0], day: new Date().toISOString(), height, weight, bmi: calc })
+    const hist = await connection('history').insert({ iduser: resp[0].id, day: new Date().toISOString(), height, weight, bmi: calc })
     return res.status(200).json({ id: resp[0] })
   }
 }

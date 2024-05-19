@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const authMiddleware = require('./middlewares/auth.js')
 
 const session = require('./controllers/session.js')
@@ -11,6 +12,7 @@ const category = require('./controllers/category.js')
 
 const routes = express()
 routes.use(express.json())
+routes.use(cors())
 
 routes.post('/session', session.create)
 routes.post('/user', user.create)
@@ -30,6 +32,7 @@ routes.get('/notification/count/:iduser', notification.count)
 routes.get('/notification/:iduser', notification.index)
 routes.post('/notification/:id', notification.update)
 
+routes.get('/user/:id', user.index)
 routes.get('/user', user.index)
 routes.delete('/user/:id', user.delete)
 

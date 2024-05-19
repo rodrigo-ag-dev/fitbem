@@ -6,7 +6,7 @@ module.exports = {
   async create(req, res) {
     const { email, password } = req.headers
     if (!email)
-      return res.status(401).json({ error: 'Informe um e-mail.' })
+      return res.status(401).json({ error: 'Informe um e-mail 3.' })
     if (!password)
       return res.status(401).json({ error: 'Informe a senha.' })
     const reg = await connection('user')
