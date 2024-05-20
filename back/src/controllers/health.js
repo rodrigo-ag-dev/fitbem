@@ -16,7 +16,7 @@ module.exports = {
     var data = null
     if (text) {
       data = await connection('category')
-        .select(['professional.*', connection.raw(`city.description ||' / '|| city.state as city`), connection.raw('category.description as category')])
+        .select(['professional.*', connection.raw(`city.description ||' / '|| city.state as city`), connection.raw('category.description as category'), 'category.type'])
         .join('professional', 'category.id', 'professional.idcategory')
         .join('city', 'professional.idcity', 'city.id')
         .where('category.type', '0')
@@ -26,7 +26,7 @@ module.exports = {
         )
     } else {
       data = await connection('category')
-        .select(['professional.*', connection.raw(`city.description ||' / '|| city.state as city`), connection.raw('category.description as category')])
+        .select(['professional.*', connection.raw(`city.description ||' / '|| city.state as city`), connection.raw('category.description as category'), 'category.type'])
         .join('professional', 'category.id', 'professional.idcategory')
         .join('city', 'professional.idcity', 'city.id')
         .where('category.type', '0')

@@ -2,6 +2,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createContext, useContext, useEffect, useState } from "react";
 import api from "../app/api";
+import { BMIStatus } from "../functions/global";
 import { AuthContext } from "./AuthContext";
 
 export const NavigateContext = createContext({})
@@ -37,13 +38,14 @@ export const NavigateProvider = ({ children }) => {
         .then(resp => {
           if (resp && resp.status == 200) {
             if (resp.data && resp.data.length > 0) {
+              resp.data.forEach(e => e.caption = BMIStatus(e.bmi))
               const history = JSON.stringify(resp.data)
-              if (history)
+              if (history) {
                 AsyncStorage.setItem('fitbem_history', history)
-
-              const data = JSON.stringify(resp.data[0])
-              if (data)
-                AsyncStorage.setItem('fitbem_data', data)
+                const data = JSON.stringify(resp.data[0])
+                if (data)
+                  AsyncStorage.setItem('fitbem_data', data)
+              }
             }
           }
         })

@@ -1,13 +1,19 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  title: {
+    display: 'flex',
+    fontSize: 20,
+    fontWeight: 500,
+    color: '#4F808D'
+  },
   backBlur: {
     position: 'absolute',
-    top: '0px',
-    left: '0px',
-    right: '0px',
-    bottom: '0px',
-    zIndex: '1',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 1,
     backgroundColor: '#00000099',
     display: 'flex',
     alignItems: 'center',
@@ -15,20 +21,20 @@ export const styles = StyleSheet.create({
   },
   screenMessage: {
     width: '80vw',
-    maxWidth: '350px',
+    maxWidth: 350,
     height: '90vh',
-    maxHeight: '250px',
+    maxHeight: 250,
     border: '1px solid #ffffff',
-    borderRadius: '10px',
+    borderRadius: 10,
     backgroundColor: '#ffffff22',
     display: 'flex',
     justifyContent: 'space-evenly',
     alignItems: 'center'
   },
   textMessage: {
-    fontSize: '23px',
+    fontSize: 23,
     color: '#ffffff',
-    padding: '5px',
+    padding: 5,
     textAlign: 'center'
   },
   containerLogin: {
@@ -42,12 +48,12 @@ export const styles = StyleSheet.create({
     width: '100vw',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginVertical: '30px',
+    marginVertical: 30,
   },
   centerAlign: {
     display: 'flex',
     width: '90%',
-    maxWidth: '400px',
+    maxWidth: 400,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -55,54 +61,54 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     maxWidth: 'unset',
-    gap: '10px',
-    marginHorizontal: '0px'
+    gap: 10,
+    marginHorizontal: 0
   },
   colDirection: {
     display: 'flex',
     flexDirection: 'column'
   },
   imageLogin: {
-    width: '110px',
-    height: '100px',
+    width: 110,
+    height: 100,
   },
   appName: {
     color: '#ffffff',
-    fontSize: '35px',
-    marginBottom: '20px'
+    fontSize: 35,
+    marginBottom: 20
   },
   fontLower: {
     color: '#ffffff',
-    fontSize: '18px',
-    marginVertical: '2px'
+    fontSize: 18,
+    marginVertical: 2
   },
   fontNormal: {
     color: '#ffffff',
-    fontSize: '20px',
-    marginVertical: '2px'
+    fontSize: 20,
+    marginVertical: 2
   },
   containerBetween: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '10px',
+    padding: 10,
     backgroundColor: 'green',
     backgroundColor: '#e9e4e4',
   },
   containerScrollView: {
     display: 'flex',
     width: '100%',
-    maxWidth: '390px',
+    maxWidth: 390,
   },
   containerForm: {
     flex: 1,
-    gap: '5px',
+    gap: 5,
     display: 'flex',
     width: '100%',
-    maxWidth: '385px',
+    maxWidth: 385,
     alignItems: 'center',
     flexDirection: 'column',
-    paddingHorizontal: '5px',
+    paddingHorizontal: 5,
     justifyContent: 'space-between',
   },
   buttonOk: {
@@ -110,8 +116,8 @@ export const styles = StyleSheet.create({
     color: '',
     backgroundColor: '#ffffff',
     borderRadius: 10,
-    width: '120px',
-    maxWidth: '120px',
+    width: 120,
+    maxWidth: 120,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
@@ -131,4 +137,4 @@ export const styles = StyleSheet.create({
     width: 327,
     height: 145,
   },
-});
+})

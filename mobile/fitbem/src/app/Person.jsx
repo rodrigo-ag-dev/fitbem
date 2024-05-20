@@ -1,8 +1,9 @@
 "use client"
 
 import { useEffect, useState } from 'react'
-import { View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import perfil from "../assets/perfil.png"
 import Drawer from '../components/Drawer'
 import Header from '../components/Header/index.jsx'
 import Input from "../components/Input"
@@ -53,19 +54,29 @@ export default function Person({ ...props }) {
       <Header />
       <ScrollView style={styles.containerScrollView}>
         <View style={styles.containerForm}>
-          <Input placeholder='nome' value={nome} onChangeText={setNome} autoFocus />
-          <Input placeholder='e-mail' value={email} onChangeText={setEmail} />
-          <Input placeholder='sexo' data={[{ label: 'Masculino', value: '0' }, { label: 'Feminino', value: '1' }]} />
-          <Input placeholder='fone' value={fone} onChangeText={setFone} />
-          <Input placeholder='logradouro' value={rua} onChangeText={setRua} />
-          <Input placeholder='número' value={numero} onChangeText={setNumero} />
-          <Input placeholder='cep' value={cep} onChangeText={setCep} />
-          <Input placeholder='bairro' value={bairro} onChangeText={setBairro} />
-          <Input placeholder='cidade' value={cidade} onChangeText={setCidade} />
-          <Input placeholder='uf' value={uf} onChangeText={setUf} />
-          <Input placeholder='peso' value={peso} onChangeText={setPeso} />
-          <Input placeholder='altura' value={altura} onChangeText={setAltura} />
-          <Input placeholder='nascimento' value={nascimento} onChangeText={setNascimento} />
+          <View style={{ width: '100%', maxWidth: 385, height: 120, alignItems: 'center', justifyContent: 'center' }}>
+            <Image source={perfil} />
+          </View>
+          <Text style={[styles.title, { width: '100%', maxWidth: 365, marginLeft: 5 }]}>Dados Pessoais</Text>
+          <Input compact={true} placeholder='nome' value={nome} onChangeText={setNome} autoFocus />
+          <Input compact={true} placeholder='e-mail' value={email} onChangeText={setEmail} />
+          <Input compact={true} placeholder='fone' value={fone} onChangeText={setFone} />
+          <View style={{ width: '100%', maxWidth: 385, flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Input compact={true} style={{ width: '48%' }} placeholder='sexo' data={[{ label: 'Masculino', value: '0' }, { label: 'Feminino', value: '1' }]} />
+            <Input compact={true} style={{ width: '48%' }} placeholder='nascimento' value={nascimento} onChangeText={setNascimento} />
+          </View>
+          <Text style={[styles.title, { width: '100vw', maxWidth: 365, marginLeft: 5 }]}>Endereço</Text>
+          <Input compact={true} placeholder='logradouro' value={rua} onChangeText={setRua} />
+          <Input compact={true} placeholder='número' value={numero} onChangeText={setNumero} />
+          <Input compact={true} placeholder='cep' value={cep} onChangeText={setCep} />
+          <Input compact={true} placeholder='bairro' value={bairro} onChangeText={setBairro} />
+          <Input compact={true} placeholder='cidade' value={cidade} onChangeText={setCidade} />
+          <Input compact={true} placeholder='uf' value={uf} onChangeText={setUf} />
+          <Text style={[styles.title, { width: '100vw', maxWidth: 365, marginLeft: 5 }]}>Informações Adicionais</Text>
+          <View style={{ width: '100%', maxWidth: 385, flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Input compact={true} style={{ width: '48%' }} placeholder='peso' value={peso} onChangeText={setPeso} />
+            <Input compact={true} style={{ width: '48%' }} placeholder='altura' value={altura} onChangeText={setAltura} />
+          </View>
         </View>
       </ScrollView>
       <Drawer title='Dados pessoais' tab={4} {...props} />
