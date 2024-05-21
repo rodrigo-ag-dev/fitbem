@@ -31,6 +31,7 @@ routes.get('/health', health.get)
 routes.get('/notification/count/:iduser', notification.count)
 routes.get('/notification/:iduser', notification.index)
 routes.post('/notification/:id', notification.update)
+routes.post('/notification', notification.insert)
 
 routes.get('/user/:id', user.index)
 routes.get('/user', user.index)

@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     height: '60px',
     flexDirection: 'row',
     width: '100%',
-    maxWidth: '390px',
+    maxWidth: '370px',
     backgroundColor: '#4f808d',
     borderRadius: '10px',
     transition: 'background 0.5s, transform 0.5s',

@@ -14,8 +14,8 @@ module.exports = {
     const { iduser } = req.params
     const data = await connection('notification').select('*')
       .where(`iduserto`, iduser)
+      .orderBy('status', 'asc')
       .orderBy('day', 'desc')
-      .orderBy('status', 'desc')
     if (!data || data.length == 0)
       return res.status(401).json({ error: 'Sem dados.' })
     return res.status(200).json({ data })
@@ -26,5 +26,12 @@ module.exports = {
     if (!data || data.length == 0)
       return res.status(401).json({ error: 'Sem dados.' })
     return res.status(200).json({ data })
+  },
+  async insert(req, res) {
+    const { iduserto, iduserfrom, type, status, message, day } = req.body
+    const resp = await connection('notification').insert({ iduserto, iduserfrom, type, status, message, day })
+    if (!resp || resp.length == 0)
+      return res.status(203).json({ error: 'Sem dados.' })
+    return res.status(201).json(req.body)
   },
 }

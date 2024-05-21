@@ -3,63 +3,63 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   card: {
     position: 'relative',
-    width: '343px',
-    height: '261px',
+    width: 370,
+    height: 261,
     alignItems: 'center',
     justifyContent: 'flex-end',
     backgroundColor: 'transparent',
-    marginBottom: '10px'
+    marginBottom: 10
   },
   back: {
-    width: '343px',
-    height: '243px',
+    width: 370,
+    height: 243,
     backgroundColor: '#ffffff',
-    borderRadius: '10px',
+    borderRadius: 10,
     border: '1px solid "#cccccc"',
-    marginRight: '5px',
+    marginRight: 5,
     boxShadow: '2px 2px 1px .5px rgba(0, 0, 0	, .2);'
   },
   info: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    margin: '15px',
-    marginTop: '43px'
+    margin: 15,
+    marginTop: 43
   },
   category: {
     position: 'absolute',
-    top: '0px',
-    left: '80px',
-    width: '174px',
-    height: '37px',
+    top: 0,
+    left: 80,
+    width: 174,
+    height: 37,
     backgroundColor: '#4F808D',
-    borderRadius: '10px',
+    borderRadius: 10,
     display: 'flex',
     textAlign: 'auto',
     alignContent: 'center',
     justifyContent: 'center',
     color: '#ffffff',
-    fontSize: '16px',
-    padding: '7px',
+    fontSize: 16,
+    padding: 7,
     boxShadow: '2px 2px 1px .5px rgba(0, 0, 0	, .2);'
   },
   description: {
-    fontSize: '16px',
+    fontSize: 16,
     fontWeight: 'bold'
   },
   especialidade: {
-    margin: '15px'
+    margin: 15
   },
   textespecialidade: {
-    fontSize: '16px',
+    fontSize: 16,
     fontWeight: 'bold'
   },
   titleespecialidade: {
-    fontSize: '16px',
+    fontSize: 16,
     fontWeight: 'bold'
   },
   textespecialidade: {
-    fontSize: '12px',
+    fontSize: 12,
     textAlign: 'justify'
   }
 })

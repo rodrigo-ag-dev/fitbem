@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from 'react'
-import { ScrollView, Text, View } from 'react-native'
+import { FlatList, Text, View } from 'react-native'
 import Card from '../components/Card/index.jsx'
 import Drawer from '../components/Drawer'
 import Header from '../components/Header/index.jsx'
@@ -30,9 +30,12 @@ export default function Health({ ...props }) {
         <Text style={styles.title}>Profissionais da Saúde</Text>
         <Input autoFocus={true} light={true} style={{ marginTop: 20 }} />
       </View>
-      <ScrollView style={{ width: '100vw', maxWidth: 360 }}>
-        {data && data.map(e => <Card key={e.id} data={e} />)}
-      </ScrollView>
+      <FlatList
+        style={{ width: '100vw', maxWidth: 370 }} contentContainerStyle={{ alignItems: 'center' }}
+        data={data}
+        renderItem={({item}) => <Card data={item} />}
+        keyExtractor={item => item.id}
+      />
       <Drawer title='Profissionais da saúde' tab={2} {...props} />
     </View>
   )

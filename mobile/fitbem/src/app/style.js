@@ -91,9 +91,9 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 10,
     backgroundColor: 'green',
     backgroundColor: '#e9e4e4',
+    padding: 10
   },
   containerScrollView: {
     display: 'flex',

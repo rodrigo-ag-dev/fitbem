@@ -3,7 +3,7 @@ import Doutor from "../../assets/Dr.png"
 import Trainer from "../../assets/Trainer.png"
 import { styles } from "./style"
 
-export default Banner = ({ data, ...props }) => {
+export default Card = ({ data, ...props }) => {
   const { category, description, city, whatsapp, specialty, type } = data
   const image = type == 0 ? Doutor : Trainer
   return (
