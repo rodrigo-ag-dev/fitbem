@@ -14,7 +14,6 @@ export const NavigateProvider = ({ children }) => {
   const [history, setHistory] = useState(null)
 
   useEffect(() => {
-
     AsyncStorage.getItem('fitbem_data')
       .then(resp => {
         if (resp)
@@ -32,6 +31,11 @@ export const NavigateProvider = ({ children }) => {
       .catch(e => {
         console.log('history error', e)
       })
+
+    if (user)
+      AsyncStorage.setItem('fitbem_login',
+        JSON.stringify(user)
+      )
 
     if (user && user.id)
       api.get(`history?id=${user.id}`)

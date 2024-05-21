@@ -13,8 +13,14 @@ import { NavigateProvider } from './context/NavigateContext'
 export default function Routes() {
   const Stack = createNativeStackNavigator()
 
+  const loginVerifyLocal = async () => {
+    const { loginVerify } = useContext(AuthContext)
+    await loginVerify()
+  }
+
   const Route = () => {
     const { user } = useContext(AuthContext)
+    loginVerifyLocal()
     return (
       !user || !user.token
         ? <Login />

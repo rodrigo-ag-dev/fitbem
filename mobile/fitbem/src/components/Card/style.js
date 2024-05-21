@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
   category: {
     position: 'absolute',
     top: 0,
-    left: 80,
+    left: 90,
     width: 174,
     height: 37,
     backgroundColor: '#4F808D',
