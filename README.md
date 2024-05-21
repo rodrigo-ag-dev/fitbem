@@ -45,6 +45,16 @@
 ### Visualizando o portal
 * Basta abrir, em seu navegador preferido, o arquivo **index.html** contido dentro da subpasta **front** da pasta você fez o clone
 
+### Visualizando o aplicativo
+* Crie o arquivo **.env** na pasta **mobile/fitbem**, e inclua o conteúdo abaixo
+  - Versão com servidor já online e com dados
+  - EXPO_PUBLIC_BASEURL='https://serverfitbem.vercel.app/api/'
+  - Versão local
+  - EXPO_PUBLIC_BASEURL='http://localhost:3333/api/'
+* Para instanciar uma versão em seu navegador, use o comando:
+  - **yarn start**
+  - após compilar vai aparecer um menu com opções, selecio w para web
+
 ### Integrantes do grupo 01
 * ANA CAROLINE GONZAGA ACQUESTA
 * CARLA SETRA SANTOS
