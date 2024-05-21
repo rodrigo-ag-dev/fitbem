@@ -55,7 +55,7 @@
   - **yarn start**
   - após compilar vai aparecer um menu com opções, selecio w para web
  
-<img src="/mobile/fitbem/src/assets/demo.gif">
+<img src="/mobile/fitbem/src/assets/demo.gif" width="345" height="742">
 
 ### Integrantes do grupo 01
 * ANA CAROLINE GONZAGA ACQUESTA
