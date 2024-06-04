@@ -53,7 +53,7 @@
   - EXPO_PUBLIC_BASEURL='http://localhost:3333/api/'
 * Para instanciar uma versão em seu navegador, use o comando:
   - **yarn start**
-  - após compilar vai aparecer um menu com opções, selecio w para web
+  - após compilar vai aparecer um menu com opções, selecione w para web
  
 <img src="/mobile/fitbem/src/assets/demo.gif" width="345" height="742">
 
